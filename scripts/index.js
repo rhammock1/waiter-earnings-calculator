@@ -97,7 +97,6 @@ const handleSubmitClick = function() {
     //assign variable to each form value
     //put variable as paramater in other functions
     let mealPrice = $('#meal-price').val();
-    
     let taxRate = $('#tax-rate').val();
     let tipRate = $('#tip-rate').val();
     let subtotal = handleSubtotal(mealPrice, taxRate);
@@ -110,11 +109,32 @@ const handleSubmitClick = function() {
     
   });
 }
+const clearTextBoxes = function() {
+  $('#meal-price').val('');
+  $('#tax-rate').val('');
+  $('#tip-rate').val('');
+}
 const handleCancelClick = function() {
   $('.main').on('click', '#cancel', function(event) {
     event.preventDefault();
-    console.log('cancel button pressed');
+    clearTextBoxes();
   });
+}
+const clearData = function() {
+  myEarnings.tipTotal = 0;
+  myEarnings.mealCount = 0;
+  myEarnings.averageTip = 0;
+}
+const handleResetClick = function() {
+  $('body').on('click', '#reset', function(event) {
+    event.preventDefault();
+    
+    clearTextBoxes();
+    handleClearCustomerCharge();
+    clearData();
+    render();
+  });
+
 }
 
 
@@ -123,7 +143,7 @@ const render = function() {
 }
 
 const startUp = function() {
- 
+  handleResetClick();
   handleSubmitClick();
   handleCancelClick();
   render();
