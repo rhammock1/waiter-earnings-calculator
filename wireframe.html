@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waiter Earnings Calculator</title>
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+  <header class = 'edges'>
+    <h1>Waiter Earnings Calculator</h1>
+  </header>
+  <main class='main'>
+    <div class='container-left'>
+        <h2 class='panel-title'>Meal Details</h2>
+        <form class='meal-details'>
+          <label for='meal-price'>Meal Price: $</label>
+          <input type='text' id='meal-price' name='meal-price'>
+          <label for='tax-rate'>Tax Rate: %</label>
+          <input type='text' id='tax-rate' name='tax-rate'>
+          <label for='tip-rate'>Tip Rate: %</label>
+          <input type='text' id='tip-rate' name='tip-rate'>
+          <input type='submit' value='Submit'>
+          <input type='button' value='Cancel'>
+
+        </form>
+    </div>
+    <div class='container-right'>
+      <div class='container-top'>
+        <h2 class='panel-title'>Customer Charges</h2>
+        <p class='placeholder'>Subtotal</p><br>
+        <p class='placeholder'>Tip</p><br>
+        <hr>
+        <p class='placeholder'>Total</p><br>
+      </div>
+      <div class='container-bottom'>
+        <h2 class='panel-title'>My Earnings</h2>
+        <p class='placeholder'>Tip total:</p><br>
+        <p class='placeholder'>Meal Count:</p><br>
+        <p class='placeholder'>Average Tip Amount:</p><br>
+      </div>
+    </div>
+  </main>
+  <button class='reset'>RESET</button>
+  <footer class='edges'>
+    &#169 RHammock
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="./scripts/index.js"></script>
+</body>
+</html>
