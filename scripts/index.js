@@ -37,19 +37,19 @@ const rightSideTemplate = function() {
       <div class='container-top'>
         <h2 class='panel-title'>Customer Charges</h2>
         <div class='holder'>
-        <p class='placeholder'>Subtotal: $${myEarnings.customerCharges.subtotal}</p><br>
-        <p class='placeholder'>Tip: $${myEarnings.customerCharges.tip}</p><br>
-        <hr>
-        <p class='placeholder'>Total: $${myEarnings.customerCharges.totalPrice}</p><br>
+          <p class='placeholder'>Subtotal: $${myEarnings.customerCharges.subtotal}</p>
+          <p class='placeholder'>Tip: $${myEarnings.customerCharges.tip}</p>
+          <hr>
+          <p class='placeholder'>Total: $${myEarnings.customerCharges.totalPrice}</p>
         </div>
       </div>
       <div class='container-bottom'>
         <h2 class='panel-title'>My Earnings</h2>
         <div class='holder'>
-        <p class='placeholder'>Tip total: $${myEarnings.tipTotal}</p><br>
-        <p class='placeholder'>Meal Count: ${myEarnings.mealCount}</p><br>
-        <p class='placeholder'>Average Tip Amount: $${myEarnings.averageTip}</p><br>
-        </div>
+        <p class='placeholder'>Tip total: $${myEarnings.tipTotal}</p>
+        <p class='placeholder'>Meal Count: ${myEarnings.mealCount}</p>
+        <p class='placeholder'>Average Tip: $${myEarnings.averageTip}</p>
+        <input type='button' id='reset' value='RESET'>
       </div>
     </div>`;
   return rightSide;
@@ -101,6 +101,7 @@ const handleAverageTip = function() {
   let tip = myEarnings.tipTotal;
   let totalMeals = myEarnings.mealCount;
   let averageTip = tip / totalMeals;
+  averageTip = Math.round((tip + Number.EPSILON) * 100) / 100;
   console.log(averageTip);
   myEarnings.averageTip = averageTip;
 }
