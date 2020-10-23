@@ -97,13 +97,14 @@ label {
   width:33%;
 }
 #reset {
-  width:60%;
+  width:auto;
   margin: 20px 0 30px 0;
   align-self:flex-end;
   padding: 1px 6px;
 }
 input[type='button'] {
   background-color:#DE8F6E;
+  width: auto;
   font-family: 'Permanent Marker', cursive;
 }
 input[type='button']:hover {
