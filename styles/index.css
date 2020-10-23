@@ -1,27 +1,112 @@
-div {
-  border: 10px solid black;
+body {
+  margin:0;
+  padding:0;
+  background-image:url('https://image.freepik.com/free-vector/succulent-plant-seamless-pattern-background_35322-1072.jpg')
 }
 .main {
   width:100%;
   height:100%;
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-.container-left {
-  display:flex;
-  text-align:right;
-  width:35%;
-  height:75%;
-}
-.container-right {
-  width:35%;
-  height: 50%;
+.container-left, .container-right {
+  margin: 0px 15px;
   display:flex;
   flex-direction:column;
-  justify-content: space-between
+  justify-content: space-around;
+  align-items:space-around;
+  width:40%;
+  height:auto;
+
+}
+.meal-details {
+  display:flex;
+  height:100%;
+  width:100%;
+  flex-direction:column;
+  justify-content: space-around;
+}
+input {
+  width:33%;
 }
 
+label {
+  display:flex;
+  flex-direction:row;
+  margin: auto;
+  justify-content: space-around;
+}
+.panel-title {
+  text-align:center;
+  text-decoration:underline;
+}
+.holder {
+  width:58%;
+  margin-left:0;
+  margin-right:auto;
+  align-items:flex-end;
+  display:flex;
+  flex-direction:column
+}
+.container-left {
+  border: 5px solid #DE8F6E;
+  background-color:white;
+}
+.container-top {
+   border: 5px solid #DE8F6E;
+   width:auto;
+   height:auto;
+   margin-bottom:10px;
+   background-color:white;
+}
+.container-bottom {
+  border: 5px solid #DE8F6E;
+  width:auto;
+  height:auto;
+  display:flex;
+  flex-direction:column;
+  align-items: space-between;
+  margin-top:10px;
+  background-color:white;
+}
+.button-holder {
+  display:flex;
+  justify-content:space-around;
+  margin-bottom:30px;
+}
+.button-holder input {
+  width:33%;
+}
+#reset {
+  float:right;
+  margin-top:10px;
+  margin-right:15px;
+  background-color:#DE8F6E;
+}
+input[type='button'] {
+  background-color:#DE8F6E;
+}
+.placeholder {
+  margin-right:20px;
+  text-align: center;
+}
+hr {
+  width:33%;
+  align-self:flex-end;
+  margin-right:10px;
+
+}
 .edges {
   text-align: center;
-
+  background-color:#CC8B86;
+  width:100%;
+  height: 100%;
+  padding-top:25px;
+  padding-bottom:20px;
+}
+header {
+  margin-bottom:25px;
+}
+footer {
+  margin-top: 40px;
 }
